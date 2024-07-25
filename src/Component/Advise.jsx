@@ -13,9 +13,6 @@ export const Advice= ()=>{
     //     const data = await response.json();
     //     setAdvice(data.slip.advice);
     // }
-    const lala = ()=>{
-        console.log("kak")
-    }
 
     const getAdvice = async ()=>{
         const response = await axios.get("https://api.adviceslip.com/advice")
