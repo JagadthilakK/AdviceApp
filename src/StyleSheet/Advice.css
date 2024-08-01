@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
 
-*{
-    font-family: "Six+Caps",sans-serif;
+* {
+    font-family: "Six+Caps", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.mainContainer{
+.mainContainer {
     background-image: url("../Images/background.jpg");
     background-size: cover;
     background-position: center;
@@ -12,32 +14,34 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
-.header{
+.header {
     font-size: 80px;
     text-align: center;
-    height: 10vh;
-    width: 40%;
+    width: 80%;
+    max-width: 600px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 20px;
 }
-
-.bodyContainer{
-    width: 100%;
-    height: 90vh;
+.bodyContainer {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    text-align: center;
 }
-.adviceText{
+.adviceText {
     font-size: 50px;
     padding: 4%;
+    max-width: 800px;
 }
-.getButton{
+.getButton {
     font-size: 15px;
     border: none;
     background-color: #ff9f1a;
@@ -45,9 +49,55 @@
     padding: 15px 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
-.getButton:hover{
-    background-color:#ffaf40 ;
+.getButton:hover {
+    background-color: #ffaf40;
     color: black;
     font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        font-size: 60px;
+        width: 90%;
+    }
+    .adviceText {
+        font-size: 40px;
+        padding: 3%;
+    }
+    .getButton {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 50px;
+        width: 95%;
+    }
+    .adviceText {
+        font-size: 30px;
+        padding: 2%;
+    }
+    .getButton {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 40px;
+        width: 100%;
+    }
+    .adviceText {
+        font-size: 24px;
+        padding: 1%;
+    }
+    .getButton {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
 }
